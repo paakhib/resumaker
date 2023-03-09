@@ -1,0 +1,902 @@
+<html>
+  <head>
+    <title>ResuMaker</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mitr:wght@300&family=Niramit:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rampart+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nokora:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Genos:wght@300&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Niramit", sans-serif;
+        background-color: #e5c9f0;
+      }
+
+      .heading {
+        width: 60%;
+        margin: auto;
+        text-align: center;
+        font-size: 3rem;
+        padding: 10px;
+        font-family: "Rampart One", cursive;
+        color: rgb(85, 9, 126);
+      }
+
+      .box {
+        display: flex;
+        margin: auto;
+        width: 80%;
+        margin-top: 0%;
+      }
+
+      .box1 {
+        border: solid black 1px;
+        width: 65%;
+        background-color: white;
+        border-radius: 14px;
+        background-color: rgba(0, 0, 0, 0.704);
+        color: white;
+        overflow-y: auto;
+        max-height: 32rem;
+      }
+      .box1::-webkit-scrollbar {
+        display: none;
+      }
+
+      .box2 {
+        border: solid black 1px;
+        margin-left: 3%;
+        width: 100%;
+        border-radius: 14px;
+        background-color: rgb(85, 9, 126);
+        color: white;
+        max-height: 32rem;
+        overflow-y: auto;
+      }
+
+      .form1 {
+        display: flex;
+        flex-direction: column;
+        padding-top: 2%;
+      }
+      input{
+        outline: none;
+        padding: 1px 8px;
+      }
+
+      .personal {
+        text-align: center;
+        margin-top: 2%;
+        font-size: large;
+      }
+
+      .form_text {
+        padding: 2% 4%;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .regular {
+        width: 55%;
+        height: 1.5rem;
+      }
+
+      .photo {
+        text-align: center;
+        margin-top: 10px;
+        padding: 2px 2px;
+      }
+      .p_button {
+        margin-top: 90px;
+        margin-left: 12px;
+        font-family: "Niramit", sans-serif;
+      }
+      .all_boxes {
+        border: solid black 1.2px;
+        border-radius: 3px;
+        font-family: "Niramit", sans-serif;
+        font-size: 0.9rem;
+      }
+
+      .edu1 {
+        padding: 2% 3%;
+        border: 1px solid black;
+        margin: 2% 2%;
+        background-color: rgba(236, 232, 232, 0.659);
+        color: rgb(26, 22, 22);
+        border-radius: 2px;
+      }
+
+      .acc1 {
+        display: none;
+      }
+
+      .arrow1 {
+        /* border: white 1px solid; */
+        /* border-radius: 3px; */
+        padding-top: 6px;
+        cursor: pointer;
+        transition: color 0.2s ease-in-out, transform 0.4s ease-in-out;
+      }
+      .arw_clr
+      {
+        color: grey;
+      }
+
+      .arrow1:hover {
+        color: grey;
+      }
+
+      .active {
+        display: block;
+      }
+
+      .top {
+        margin-top: 4%;
+      }
+
+      .regular1 {
+        width: 60%;
+        height: 1.5rem;
+      }
+
+      .regular2 {
+        width: 70%;
+        margin-bottom: 2%;
+        margin-left: 15%;
+      }
+
+      .form2 {
+        padding: 4% 3%;
+        border: 1px solid black;
+        margin: 2% 2%;
+        background-color: rgba(236, 232, 232, 0.659);
+        color: rgb(26, 22, 22);
+        border-radius: 2px;
+      }
+
+      .heads {
+        margin: 2% 10%;
+        font-size: 1.4rem;
+      }
+
+      .sch_txt {
+        padding-bottom: 2%;
+        font-size: 1rem;
+      }
+
+      .sch_flex {
+        display: flex;
+        justify-content: space-between;
+        width: 98%;
+      }
+
+      .align {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .buttons {
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 1%;
+      }
+
+      .button {
+        background-color: rgba(236, 232, 232, 0.659);
+        border: solid black 1px;
+        border-radius: 100px;
+        padding: 1% 4%;
+        cursor: pointer;
+        font-family: "Niramit", sans-serif;
+        margin-bottom: 20px;
+      }
+
+      .button:hover {
+        background-color: rgba(0, 0, 0, 0.507);
+        color: rgb(255, 255, 255);
+        border: solid white 1px;
+      }
+
+      ::placeholder {
+        font-family: "Niramit";
+        font-size: 0.8rem;
+        text-align: center;
+        color: rgb(111, 112, 112);
+      }
+
+      .line {
+        background-color: rgb(232, 232, 232);
+        height: 0.5px;
+        margin: 2% 4%;
+      }
+
+      .new_class {
+        display: flex;
+      }
+
+      .first_plus,
+      .second_plus {
+        margin: auto;
+        text-align: center;
+        width: 15%;
+        font-size: 0.8rem;
+        cursor: pointer;
+        border: 1px solid black;
+        padding: 0% 1.6%;
+        border-radius: 3000px;
+        background-color: rgba(236, 232, 232, 0.659);
+        color: black;
+      }
+
+      .first_plus:hover,
+      .second_plus:hover {
+        background-color: rgba(0, 0, 0, 0.385);
+        color: white;
+        border: solid white 1px;
+      }
+      .user_img {
+        display: flex;
+        justify-content: space-between;
+      }
+      #user_image {
+        border-radius: 100%;
+        margin: 4%;
+        aspect-ratio: 1;
+        width: 100px;
+      }
+
+      /* Resume style */
+      .bg {
+        width: 100vw;
+        height: 100vh;
+        overflow: scroll;
+        background-color: rgba(73, 81, 99, 0.858);
+        position: absolute;
+        top: 0;
+        left: 0;
+        
+      }
+
+      #resume {
+        margin: 0 auto;
+        width: 595px;
+        border: 1px solid rgba(0, 0, 0, 0.411);
+        aspect-ratio: 210/294;
+        font-family: "Nokora", sans-serif;
+        background-color: white;
+        display: flex;
+        text-transform: capitalize;
+      }
+      .nav_bar
+      {
+        position: sticky;
+        top:0;
+        left:0;
+        width: 100%;
+        height: 64px;
+        display: flex;
+        background-color: rgb(15,20,30);
+        color: white;
+        justify-content: space-between;
+        padding: 0px 32px;
+        align-items: center; 
+      }
+      .nav_text
+      {
+        font-size: 20px;
+      }
+      .download
+      {
+        font-family: "Nokora", sans-serif;
+        background-color: rgb(57, 57, 247);
+        color: white;
+        font-size: 18px;
+        padding: 5px 40px;
+        border-radius: 5px;
+      }
+      .download:hover{
+        color:rgb(57, 57, 247);
+        background-color: white;
+        cursor: pointer;
+      }
+      .back
+      {
+        font-size: 20px;
+      }
+      .back:hover{
+        color:rgb(140, 137, 137);
+        cursor: pointer;
+      }
+
+      .header {
+        margin-top: 2%;
+        width: 100%;
+        height: 15%;
+        background-color: #19a28e;
+      }
+
+      .name {
+        padding-top: 4%;
+        font-size: 2.5rem;
+        color: white;
+        margin-left: 20px;
+        font-weight: bold;
+      }
+
+      .strip {
+        background-color: #353535;
+        height: 100%;
+        width: 35%;
+      }
+
+      .image {
+        width: 60%;
+        aspect-ratio: 1;
+         /* background-color: rgb(255, 255, 255);  */
+        margin: auto;
+        border-radius: 100%;
+        margin-top: 12%;
+      }
+
+      .title {
+        margin-left: 20px;
+        font-size: 22px;
+        color: white;
+      }
+
+      .details {
+        padding-left: 12%;
+        font-size: 20px;
+        color: rgb(200, 200, 200);
+        font-weight: bold;
+        margin-top: 15%;
+        font-family: "Genos", sans-serif;
+      }
+
+      .info {
+        color: white;
+        font-size: 12px;
+        padding: 5% 12%;
+      }
+
+      .margin {
+        margin-top: 15px;
+      }
+
+      .space {
+        padding-top: 2%;
+        padding-bottom: 2%;
+      }
+
+      .main {
+        width: 65%;
+        margin-top: 3%;
+      }
+
+      .label {
+        font-weight: bold;
+        font-family: "Genos", sans-serif;
+        font-size: 18px;
+        padding: 2px 4px;
+        background-color: #19a28e;
+        border-radius: 3px;
+        color: white;
+        margin-bottom: 10px;
+        width: fit-content;
+        text-transform: uppercase;
+      }
+
+      .content {
+        margin-left: 20px;
+        margin-top: 20px;
+      }
+
+      .parent {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+      }
+
+      .text {
+        font-size: 12px;
+        padding: 1%;
+      }
+
+      .bold {
+        font-weight: bold;
+      }
+
+      .shift {
+        margin-left: 5%;
+      }
+      .image_parent {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .hide_it {
+        display: none;
+      }
+      .rotate_it
+      {
+        transform: rotate(-180deg);
+      }
+      .project_link
+      {
+        color: black;
+        text-decoration: none;
+        text-transform: lowercase;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="heading">ResuMaker</div>
+    <div class="box">
+      <div class="box1">
+        <div class="personal">Personal Details</div>
+        <div class="line"></div>
+        <form class="form1">
+          <div class="form_text">
+            First Name
+            <input class="regular all_boxes" type="text" id="first_n" />
+          </div>
+          <div class="form_text">
+            Last Name
+            <input class="regular all_boxes" type="text" id="last_n" />
+          </div>
+          <div class="form_text">
+            Heading
+            <input class="regular all_boxes" type="text" id="title" />
+          </div>
+          <div class="form_text">
+            Phone Number
+            <input class="regular all_boxes" type="text" id="phone_no" />
+          </div>
+          <div class="form_text">
+            Email Address
+            <input class="regular all_boxes" type="email" id="email" />
+          </div>
+          <div class="form_text">
+            Address <input class="regular all_boxes" type="text" id="address" />
+          </div>
+          <div class="photo">Upload Your Photo Here</div>
+          <div class="user_img">
+            <input class="p_button" type="file" />
+            <img src="unknown.png" id="user_image" />
+          </div>
+        </form>
+      </div>
+      <div class="box2">
+        <div class="align top">
+          <div class="heads">Education</div>
+          <div class="heads arrow1"><i class="fa-regular fa-circle-down"></i></div>
+        </div>
+        <div class="edu1 acc1">
+          <form class="school">
+            <div>
+              <div class="sch_flex">
+                <div class="sch_txt">School</div>
+                <input class="regular1 all_boxes" type="text" id="sch_name" />
+              </div>
+              <div class="sch_flex">
+                <div class="sch_txt">Class X</div>
+                <input
+                  placeholder="Percentage Obtained"
+                  class="regular1 all_boxes"
+                  type="text"
+                  id="class_10"
+                />
+              </div>
+              <div class="sch_flex">
+                <div class="sch_txt">Class XII</div>
+                <input
+                  placeholder="Percentage Obtained"
+                  class="regular1 all_boxes"
+                  type="text"
+                  id="class_12"
+                />
+              </div>
+
+              <div class="sch_flex">
+                <div class="sch_txt">Duration</div>
+                <input class="regular1 all_boxes" type="text" id="sch_dur" />
+              </div>
+              <div class="line"></div>
+              <div class="sch_flex">
+                <div class="sch_txt">College</div>
+                <input class="regular1 all_boxes" id="col_name" />
+              </div>
+              <div class="sch_flex">
+                <div class="sch_txt">Course Pursued</div>
+                <input class="regular1 all_boxes" id="course" />
+              </div>
+              <div class="sch_flex">
+                <div class="sch_txt">Duration</div>
+                <input class="regular1 all_boxes" type="text" id="col_dur" />
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="line"></div>
+        <div class="align">
+          <div class="heads">Skills</div>
+          <div class="heads arrow1"><i class="fa-regular fa-circle-down"></i></div>
+        </div>
+        <div class="acc1">
+          <form class="form2" id="s_form">
+            <input
+              placeholder="Add your skill"
+              type="text"
+              class="regular2 all_boxes s2"
+            />
+            <input
+              placeholder="Add your skill"
+              type="text"
+              class="regular2 all_boxes s2"
+            />
+          </form>
+          <div class="first_plus" id="add_s">Add More</div>
+        </div>
+        <div class="line"></div>
+        <div class="align">
+          <div class="heads">Interns</div>
+          <div class="heads arrow1"><i class="fa-regular fa-circle-down"></i></div>
+        </div>
+        <div class="acc1">
+          <form class="form2" id="i_form">
+            <input
+              placeholder="Add your Intern"
+              type="text"
+              class="regular2 all_boxes i2"
+            />
+            <input
+              placeholder="Add your Intern"
+              type="text"
+              class="regular2 all_boxes i2"
+              
+            />
+            
+          </form>
+          <div class="first_plus add_intern" id="add_i">Add More</div>
+        </div>
+        <div class="line"></div>
+        <div class="align">
+          <div class="heads">Languages</div>
+          <div class="heads arrow1"><i class="fa-regular fa-circle-down"></i></div>
+        </div>
+        <div class="acc1">
+          <form class="form2" id="l_form">
+            <input
+              placeholder="Languages you speak"
+              type="text"
+              class="regular2 all_boxes l2"
+            />
+            <input
+              placeholder="Languages you speak"
+              type="text"
+              class="regular2 all_boxes l2"
+            />  
+          </form>
+          <div class="first_plus" id="add_l">Add More</div>
+        </div>
+
+        <div class="line"></div>
+        <div class="align">
+          <div class="heads">Projects</div>
+          <div class="heads arrow1"><i class="fa-regular fa-circle-down"></i></div>
+        </div>
+        <div class="acc1">
+          <form class="form2" id="p_form">
+            <input
+              placeholder="Project Link"
+              type="text"
+              class="regular2 all_boxes p2"
+            />
+            <input
+              placeholder="Project Link"
+              type="text"
+              class="regular2 all_boxes p2"
+            />
+            <div id="plus3"></div>
+            
+          </form>
+          <div class="first_plus" id="add_p">Add More</div>
+        </div>
+
+        <div>
+          <div class="buttons">
+            <button class="button" id="preview">Show Preview</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Resume  -->
+    <div id="bg" class="bg hide_it">
+      <div class="nav_bar">
+        <div class="back" id="back"> <i class="fa-solid fa-arrow-left"></i> Back to Editor</div>
+        <div class="nav_text"> Preview</div>
+        <button class="download" id="download"> Download <i class="fa-solid fa-download"></i></button>
+      </div>
+      <div id="resume">
+        <div class="strip">
+          <div class="image_parent">
+            <img class="image" id="res_image" src="unknown.png" />
+          </div>
+
+          <div class="details">Contact Details</div>
+          <div class="info">
+            <div id="user_no"></div>
+            <div class="space" id="user_email"></div>
+            <div class="space" id="user_address"></div>
+          </div>
+
+          <div id="display_lang"></div>
+          <div></div>
+
+          <div id="display_skill"></div>
+          <div></div>
+        </div>
+        <div class="main">
+          <div class="header">
+            <div class="name" id="f_name"></div>
+            <div class="title" id="user_title"></div>
+          </div>
+          <div class="content">
+            <div class="parent"  id="education">
+              <span class="label"> EDUCATION </span>
+              <div class="text bold" id="user_sch"></div>
+              <div class="text">
+                Class X - <span id="user_class10"> </span> %
+              </div>
+              <div class="text">
+                Class XII - <span id="user_class12"></span> %
+              </div>
+              <div class="text" id="user_sch_dur"></div>
+
+              <div class="text bold" id="user_col"></div>
+              <div class="text" id="user_course"></div>
+              <div class="text" id="user_col_dur"></div>
+            </div>
+            <div></div>
+
+            
+            <div id="sib_proj"></div>
+            <div> </div>
+            
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    <script src="https://kit.fontawesome.com/cb9a3e5c91.js" crossorigin="anonymous"></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
+      integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoeqMV/TJlSKda6FXzoEyYGjTe+vXA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
+      integrity="sha512-qZvrmS2ekKPF2mSznTQsxqPgnpkI4DNTlrdUmTzrDgektczlKNRRhy5X5AAOnx5S09ydFYWWNSfcEqDTTHgtNA=="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      // adding inputs to the form
+      document.getElementById("add_s").addEventListener("click", function () {
+        const new_input = document.createElement("input")
+        new_input.setAttribute("type", "text");
+        new_input.setAttribute("placeholder", "Add your Skill");
+        new_input.classList.add("regular2", "s2", "all_boxes");   
+        document.getElementById("s_form").appendChild(new_input);      
+      });
+
+      document.getElementById("add_i").addEventListener("click", function () {
+        const new_input = document.createElement("input")
+        new_input.setAttribute("type", "text");
+        new_input.setAttribute("placeholder", "Add your Intern");
+        new_input.classList.add("regular2", "i2", "all_boxes");   
+        document.getElementById("i_form").appendChild(new_input);      
+      });
+      
+      document.getElementById("add_l").addEventListener("click", function () {
+        const new_input = document.createElement("input")
+        new_input.setAttribute("type", "text");
+        new_input.setAttribute("placeholder", "Languages you speak");
+        new_input.classList.add("regular2", "l2", "all_boxes");   
+        document.getElementById("l_form").appendChild(new_input);      
+      });
+
+      document.getElementById("add_p").addEventListener("click", function () {
+        const new_input = document.createElement("input")
+        new_input.setAttribute("type", "text");
+        new_input.setAttribute("placeholder", "Project Link");
+        new_input.classList.add("regular2", "p2", "all_boxes");   
+        document.getElementById("p_form").appendChild(new_input);      
+      });
+      
+
+      let a = document.querySelectorAll(".arrow1");
+      let b = document.querySelectorAll(".acc1");
+      for (let i = 0; i < a.length; i++) {
+        a[i].addEventListener("click", function () {
+          b[i].classList.toggle("active");
+          a[i].classList.toggle("arw_clr");
+          a[i].classList.toggle("rotate_it");
+        });
+      }
+
+      // insert image
+      window.addEventListener("load", function () {
+        document
+          .querySelector('input[type="file"]')
+          .addEventListener("change", function () {
+            if (this.files && this.files[0]) {
+              let img = document.getElementById("user_image");
+              let res_img = document.getElementById("res_image");
+              img.src = URL.createObjectURL(this.files[0]);
+              res_img.src = URL.createObjectURL(this.files[0]);
+            }
+          });
+      });
+
+      document
+        .getElementById("preview")
+        .addEventListener("click", function (e) {
+          e.preventDefault();
+          // personal info
+          var name1 = document.getElementById("first_n").value;
+          var name2 = document.getElementById("last_n").value;
+          var p = document.getElementById("phone_no").value;
+          var gmail = document.getElementById("email").value;
+          var ad = document.getElementById("address").value;
+          var title = document.getElementById("title").value;
+
+          document.getElementById("f_name").innerHTML = name1 + " " + name2;
+          document.getElementById("user_email").innerHTML = gmail;
+          document.getElementById("user_no").innerHTML = p;
+          document.getElementById("user_address").innerHTML = ad;
+          document.getElementById("user_title").innerHTML = title;
+
+          // education
+          var sch = document.getElementById("sch_name").value;
+          var ten = document.getElementById("class_10").value;
+          var twelve = document.getElementById("class_12").value;
+          var dur1 = document.getElementById("sch_dur").value;
+
+          document.getElementById("user_sch").innerHTML = sch;
+          document.getElementById("user_class10").innerHTML = ten;
+          document.getElementById("user_class12").innerHTML = twelve;
+          document.getElementById("user_sch_dur").innerHTML = dur1;
+
+          var col = document.getElementById("col_name").value;
+          var cour = document.getElementById("course").value;
+          var dur2 = document.getElementById("col_dur").value;
+
+          document.getElementById("user_col").innerHTML = col;
+          document.getElementById("user_course").innerHTML = cour;
+          document.getElementById("user_col_dur").innerHTML = dur2;
+
+        
+
+          // skills, languages, projects, interns
+          let t = "";
+          let intern = document.querySelectorAll(".i2");
+          if (intern[0].value)
+          {
+            document.getElementById("education").nextElementSibling.innerHTML = "<div class='parent'> <span class='label'> INTERNS </span> <div id='user_intern'></div> </div>"
+          }
+            for (let i = 0; i < intern.length; i++) { 
+              if (intern[i].value) 
+              {t = t + intern[i];
+              document.getElementById("user_intern").innerHTML +=
+                `<div class="text i1"> ${intern[i].value} </div>`;}
+          };
+
+          let t1 = "";
+          let skill = document.querySelectorAll(".s2");
+          if (skill[0].value)
+          {
+            document.getElementById("display_skill").nextElementSibling.innerHTML = `<div class="details margin" >Skills</div>
+          <div class="info" id="user_skill">
+          </div>`;
+          }
+          for (let i = 0; i < skill.length; i++) {  
+            if (skill[i].value) 
+            {
+              t1 = t1 + skill[i];
+              document.getElementById("user_skill").innerHTML +=
+                `<li class="space shift s1"> ${skill[i].value} </li>`;
+            }
+          };
+
+          let t2 = "";
+          let project = document.querySelectorAll(".p2");
+          if (project[0].value)
+          {
+            document.getElementById("sib_proj").nextElementSibling.innerHTML = '<div class="parent"> <span class="label"> Projects </span> <div id="user_project"></div> </div>';
+          }
+          for (let i = 0; i < project.length; i++) {  
+            if (project[i].value)
+            {
+              t2 = t2 + project[i];
+            document.getElementById("user_project").innerHTML +=
+              `<div class="text p1"> <a href="https://${project[i].value}" class="project_link"> ${project[i].value} </a> </div>`;
+            }
+            
+          };
+
+          let t3 = "";
+          let language = document.querySelectorAll(".l2");
+          if (language[0].value)
+          {
+            document.getElementById("display_lang").nextElementSibling.innerHTML = `<div class="details margin">Languages</div> 
+            <div class="info" id="user_lang">
+              </div>`;
+          };
+          for (let i = 0; i < language.length; i++) {  
+            if (language[i].value)
+            {t3 = t3 + language[i];
+            document.getElementById("user_lang").innerHTML +=
+              `<div class="space l1"> ${language[i].value} </div>`};
+          };
+        }
+
+
+        );
+        
+
+      // preview of the resume
+
+      document.getElementById("preview").addEventListener("click", function () {
+        document.getElementById("bg").classList.remove("hide_it");
+      });
+
+      // downloading the resume
+
+      let download = document.getElementById("download");
+      download.addEventListener("click", function(e){
+        e.preventDefault();
+        html2canvas(document.getElementById("resume")).then(function(canvas){
+          window.image=canvas.toDataURL("image/png");
+          window.jsPDF=window.jspdf.jsPDF;
+
+          let pdf = jsPDF("p", "in", [11.69, 8.27]);
+          pdf.addImage(image, "PNG", 0, 0, 8.27, 11.69);
+          pdf.save("resume.pdf");
+        })
+      });
+
+      // going back to the editor
+
+      let back= document.getElementById("back");
+      back.addEventListener("click", function(){
+        document.getElementById("bg").classList.add("hide_it");
+      });
+    </script>
+
+  </body>
+</html>
