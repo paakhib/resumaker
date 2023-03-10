@@ -161,6 +161,55 @@
 
 
         );
+        //themes
+      
+      document.querySelector(".blue_button").addEventListener("click", function()
+      {
+        let element = document.querySelector(".header");
+        element.style.setProperty("--headercolor", "rgb(42, 42, 100)" );
+
+        let element2= document.querySelectorAll(".label");
+        for(let i=0; i< element2.length ; i++)
+        {
+          element2[i].style.setProperty("--headercolor", "rgb(42, 42, 100)");
+      }});
+        
+      document.querySelector(".green_button").addEventListener("click", function()
+      {
+        let element = document.querySelector(".header");
+        element.style.setProperty("--headercolor",  " #19a28e");
+
+        let element2= document.querySelectorAll(".label");
+        for(let i=0; i< element2.length ; i++)
+        {
+          element2[i].style.setProperty("--headercolor", "#19a28e");
+      }});
+
+      document.querySelector(".brown_button").addEventListener("click", function()
+      {
+        let element = document.querySelector(".header");
+        element.style.setProperty("--headercolor",  "rgb(108, 61, 61)");
+
+        let element2= document.querySelectorAll(".label");
+        for(let i=0; i< element2.length ; i++)
+        {
+          element2[i].style.setProperty("--headercolor", "rgb(108, 61, 61)");
+        }
+      });
+      document.querySelector(".red_button").addEventListener("click", function()
+      {
+        let element = document.querySelector(".header");
+        element.style.setProperty("--headercolor",  "rgb(235, 122, 122)");
+
+        let element2= document.querySelectorAll(".label");
+        for(let i=0; i< element2.length ; i++)
+        {
+          element2[i].style.setProperty("--headercolor", "rgb(235, 122, 122)");
+        }
+      });
+
+
+        
         
 
       // preview of the resume
