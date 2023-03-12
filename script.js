@@ -166,12 +166,12 @@
       document.querySelector(".blue_button").addEventListener("click", function()
       {
         let element = document.querySelector(".header");
-        element.style.setProperty("--headercolor", "rgb(42, 42, 100)" );
+        element.style.setProperty("--headercolor", "#2a2a64" );
 
         let element2= document.querySelectorAll(".label");
         for(let i=0; i< element2.length ; i++)
         {
-          element2[i].style.setProperty("--headercolor", "rgb(42, 42, 100)");
+          element2[i].style.setProperty("--headercolor", "#2a2a64");
       }});
         
       document.querySelector(".green_button").addEventListener("click", function()
@@ -188,29 +188,25 @@
       document.querySelector(".brown_button").addEventListener("click", function()
       {
         let element = document.querySelector(".header");
-        element.style.setProperty("--headercolor",  "rgb(108, 61, 61)");
+        element.style.setProperty("--headercolor",  "#6c3d3d");
 
         let element2= document.querySelectorAll(".label");
         for(let i=0; i< element2.length ; i++)
         {
-          element2[i].style.setProperty("--headercolor", "rgb(108, 61, 61)");
+          element2[i].style.setProperty("--headercolor", "#6c3d3d");
         }
       });
       document.querySelector(".red_button").addEventListener("click", function()
       {
         let element = document.querySelector(".header");
-        element.style.setProperty("--headercolor",  "rgb(235, 122, 122)");
+        element.style.setProperty("--headercolor",  "#eb7a7a");
 
         let element2= document.querySelectorAll(".label");
         for(let i=0; i< element2.length ; i++)
         {
-          element2[i].style.setProperty("--headercolor", "rgb(235, 122, 122)");
+          element2[i].style.setProperty("--headercolor", "#eb7a7a");
         }
-      });
-
-
-        
-        
+      }); 
 
       // preview of the resume
 
@@ -238,5 +234,14 @@
       let back= document.getElementById("back");
       back.addEventListener("click", function(){
         document.getElementById("bg").classList.add("hide_it");
-      });
+
+        let element = document.querySelector(".header");
+        element.style.setProperty("--headercolor", "#19a28e" );
+
+        let element2= document.querySelectorAll(".label");
+        for(let i=0; i< element2.length ; i++)
+        {
+          element2[i].style.setProperty("--headercolor", "#19a28e");
+
+        }});
     
