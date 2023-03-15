@@ -27,6 +27,6 @@ This project is responsive. Media queries have been used to make it responsive.
 
 The entire project is made on the front-end. HTML, CSS and Javascript have been used here.
 CSS : Designing this webside and giving hover effects. 
-HTML to Canva : To download the resume.
+HTML2canvas: To download the resume.
 Js: Fetches the data and desplays it on the resume. Some additional features like showing the preview, toggling the classes, etc.
 
